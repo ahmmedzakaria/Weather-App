@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.example.ahmme.weatherapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/dateLocationBackground"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/smallPadding"
+            android:text="Date"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+        <TextView
+            android:id="@+id/cityName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:padding="@dimen/smallPadding"
+            android:text="Dhaka"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:padding="@dimen/midiumPadding">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/currentTemperature"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="@dimen/smallPadding"
+                android:text="34\u2103"
+                android:textColor="@color/white"
+                android:layout_marginRight="3dp"
+                android:textSize="@dimen/extraLargeText" />
+            <TextView
+                android:id="@+id/currentTemperaturHighLow"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="@dimen/smallPadding"
+                android:gravity="top|center"
+                android:text="34\u2103/30\u2103"
+                android:textColor="@color/white"
+                android:textSize="@dimen/smallText" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/currentWeatherImage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:gravity="right"
+            android:padding="@dimen/smallPadding"
+            android:src="@drawable/icon30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/background_gradient"
+        android:padding="@dimen/midiumPadding">
+
+        <TextView
+            android:id="@+id/sunRise"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/smallPadding"
+            android:text="Sun Rise: 5:30Am"
+            android:textSize="@dimen/smallText" />
+
+        <TextView
+            android:id="@+id/sunSet"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/smallPadding"
+            android:text="Sun Set: 6:30Am"
+            android:textSize="@dimen/smallText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="#19d9d2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginBottom="2dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/currentDayDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/smallPadding"
+            android:textColor="@color/white"
+            android:text="Duration of the Day"
+            android:textSize="@dimen/smallText" />
+
+        <TextView
+            android:id="@+id/currentHumidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/smallPadding"
+            android:textColor="@color/white"
+            android:text="Humidity"
+            android:textSize="@dimen/smallText" />
+
+        <TextView
+            android:id="@+id/currentWind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/smallPadding"
+            android:textColor="@color/white"
+            android:text="Wind"
+            android:textSize="@dimen/smallText" />
+
+        <TextView
+            android:id="@+id/currernWeatherLastUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/smallPadding"
+            android:textColor="@color/white"
+            android:text="Last Update"
+            android:textSize="@dimen/smallText" />
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/hourlyUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/custom_button"
+            android:gravity="center"
+            android:textColor="@drawable/text_color"
+            android:text="Hourly Forecast"
+            android:textSize="@dimen/midiumText"
+            android:onClick="hourlyForeCast"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:padding="@dimen/smallPadding">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:onClick="ShowDailyWeatherForecast"
+            android:background="@drawable/background_gradient"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/day1"
+                android:text="wed"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+            <ImageView
+                android:id="@+id/day1_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/icon17"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/temperatureDay1"
+                android:text="34\u2103/30\u2103"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/background_gradient"
+            android:layout_marginRight="1dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/day2"
+                android:text="wed"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+            <ImageView
+                android:id="@+id/day2_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/icon17"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/temperatureDay2"
+                android:text="34\u2103/30\u2103"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/background_gradient"
+            android:layout_marginRight="1dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/day3"
+                android:text="wed"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+            <ImageView
+                android:id="@+id/day3_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/icon17"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/temperatureDay3"
+                android:text="34\u2103/30\u2103"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@drawable/background_gradient"
+            android:layout_marginRight="1dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/day4"
+                android:text="wed"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+            <ImageView
+                android:id="@+id/day4_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/icon17"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/temperatureDay4"
+                android:text="34\u2103/30\u2103"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/background_gradient"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/day5"
+                android:text="wed"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+            <ImageView
+                android:id="@+id/day5_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/icon17"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/temperatureDay5"
+                android:text="34\u2103/30\u2103"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
